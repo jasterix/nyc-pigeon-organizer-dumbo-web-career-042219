@@ -2,32 +2,20 @@ require 'pry'
 
 def pigeons(data)
   pigeons = []
-    new Arr data.values.flatten.uniq
+    pigeons << data.values.flatten.uniq
   end
-end
   
 def nyc_pigeon_organizer(data)
   new_hash = {}
-  data.group_by do |k,v|
-  data.group_by do |key,value|
-  if new_hash[key] == nil
-    binding.pry
-    new_hash[key] = {name: value[:type], style: [style]}
-  end
-    
-
-    end
-  end
-  
-  #   languages.each do |style, languages|
-  #   languages.each do |language, type|
-  #     if new_hash[color] == nil
-  #       new_hash[color] = {name: type[:type], style: [style]}
-  #     else
-  #       new_hash[language][:style] << style
-  # # group_by_hash(marks, "theo")
-  
-  
-
-  # write your code here!
-  # data.each do |key, values|
+  names =  data.values.flatten.uniq
+  binding.pry
+  # data.each |keys, value|
+  #   if new_hash[key] == nil
+  #     # new_hash[key] = new_hash[0] {name: options]
+  #     new_hash.keys = names
+  #     new_hash[key] = {name: value[:type], style: [style]}
+  #     options.each do |name|]}
+  #     binding.pry
+  #   end
+  # end
+end
