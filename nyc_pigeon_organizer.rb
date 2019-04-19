@@ -9,17 +9,12 @@ end
 def nyc_pigeon_organizer(data)
   new_hash = {}
   data.group_by do |k,v|
-    
-  # data.group_by { |key, value| values }.map { |k, v| [k, v.map(&:first)] }.to_h
   data.group_by do |k,v|
-    pigeons << v.values.flatten.uniq
-    binding.pry
-    v.map do |key, value|
-    [key, value.map(&:first)]
-      
-    end
-    binding.pry
-      new.to_hash
+  if new_hash[color] == nil
+    new_hash[color] = {name: type[:type], style: [style]}
+    
+    
+
     end
   end
   
