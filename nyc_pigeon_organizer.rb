@@ -8,17 +8,27 @@ require 'pry'
 def nyc_pigeon_organizer(data)
   new_hash = {}
   names = []
-  data.each do |key, values|
-    names = values.values.flatten.uniq
-    values.each do |keys, options|
-      new_hash[keys]= names
-      binding.pry
-      if data[:color].include?"Theo"
-        new_hash[key]= {color => data[:color], lives => data[:lives]}
+  data.each_with_object({}) do |(key, h), result|
+    h.each do |name, detail|    
+      detail.each do |k, v|
+        result[k] ||= {}
+       binding.pry
       end
     end
   end
 end
+  # data.each do |key, values|
+  #   names = values.values.flatten.uniq
+  #   values.each do |keys, options|
+  #     new_hash[keys]= names
+  #     # binding.pry
+  #     if data[:color].include?"Theo"
+        
+        # new_hash[key]= {color => data[:color], lives => data[:lives]}
+#       end
+#     end
+#   end
+# end
   
   
   #   if new_hash[key] == nil
